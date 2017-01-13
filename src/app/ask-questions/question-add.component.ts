@@ -7,6 +7,14 @@ import { QuestionServiceService } from '../questions/question-service.service';
 @Component({
   selector: 'app-question-add',
   templateUrl: './question-add.component.html',
+  styles:[`
+  .form-group .ng-invalid{
+    border:1px solid red;
+  }
+  .qsdescription .form-control{
+        border:1px solid red;
+  }
+  `]
 
 })
 export class QuestionAddComponent implements OnInit {
