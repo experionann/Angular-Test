@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn btn-success" > Questions </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <app-question-item *ngFor="let question of questions;let i=index" [question]="question" [questionId]="i"></app-question-item>
+    </ul>
+  </div>
+</div>

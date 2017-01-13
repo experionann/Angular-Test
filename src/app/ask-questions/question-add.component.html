@@ -1,0 +1,23 @@
+<div class="container">
+  <h2>Post your Question Here</h2><br><br>
+
+  <form id="ask-question" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+
+    <div class="form-group">
+      <label for="usr">Title</label>
+      <input type="text" class="form-control" placeholder="Type your question here." required name="qtitle" [(ngModel)]="clearQs">
+    </div>
+    <div class="form-group">
+      <label for="comment">Description</label>
+      <textarea type="text" rows=5 class="qsdescription form-control" placeholder="Type a description for your question here."
+        name="description" [(ngModel)]="clearDescript"></textarea>
+    </div>
+
+    <button class="btn btn-success qsdescription" type="submit" [disabled]="!f.valid" (click)="onSelected(questionItem)">Post  </button>
+
+    <button class="btn btn-primary qsdescription" type="clear">Clear</button>
+
+    <!--<div>  {{questionItem.name}}</div>
+ {{questionItem.name}}-->
+  </form>
+</div>
